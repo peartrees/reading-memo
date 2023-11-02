@@ -43,6 +43,19 @@ Chatモデルは複数回の対話にも対応したモデルであるが，API�
 Memoryモジュールは過去の対話履歴を適切に管理して，最新の対話に反映させるようにするモジュール．
 長期にわたる記憶を維持するために，データベースと紐づけるような機能もあるため，とても使い勝手が良い．
 
+- ConversationBufferMemory
+    - 過去の会話ログを全てプロンプトに追加するスタイル 
+
+- ConversationSummaryMemory
+    - 過去の会話ログの要約をプロンプトに追加するスタイル
+
+- ConversationBufferWindowMemory
+    - 過去の会話のk回分の対話をプロンプトに追加するスタイル
+
+- ConversationSummaryBufferMemory
+    - 過去の会話の要約の終わりkトークン分をプロンプト追加するスタイル
+
+# 5：Chains - 複数の処理をまとめる
 
 - ConversationChainについて
     - このChainを使うことで，LLMの呼び出しとmemoryの管理（記録と取り出し）を一括でできる
